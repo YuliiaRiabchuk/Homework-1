@@ -44,6 +44,17 @@ p {
   margin: 0;
 }
 
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+
 /* Base styles */
 .page {
   color: var(--maine-txt-cl);
@@ -114,6 +125,7 @@ p {
 
 .title-theme-dark {
   color: var(--light-txt-cl);
+  margin-bottom: 20px;
 }
 
 .undertitle {
@@ -125,17 +137,46 @@ p {
   color: var(--grey-txt-cl);
 }
 
+.section {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
 /* Header */
 
 .header {
   background-color: var(--dark-bg-cl);
 }
 
-.header .link {
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 70px;
+}
+
+.nav {
+  margin-right: auto;
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header-nav-link,
+.header-contact {
+  padding-top: 52px;
+  padding-bottom: 52px;
+  display: block;
   font-weight: 600;
   font-size: 12px;
   line-height: calc(16 / 12);
   letter-spacing: 0.1em;
+
   color: var(--light-txt-cl);
 }
 
@@ -144,6 +185,10 @@ p {
   color: var(--accent-txt-cl);
 }
 
+.header-group {
+  display: flex;
+  align-items: center;
+}
 .header-contact {
   margin-right: 45px;
 }
@@ -195,6 +240,7 @@ p {
   font-size: 11px;
   line-height: calc(15 / 11);
   letter-spacing: 0.1em;
+  cursor: pointer;
 
   color: rgba(157, 164, 189, 0.6);
   background-color: transparent;
@@ -205,6 +251,16 @@ p {
 }
 
 /* About section */
+
+.about-container {
+  display: flex;
+  gap: 64px;
+}
+
+.about-list {
+  display: flex;
+  gap: 30px;
+}
 
 .about-desc {
   margin-bottom: 40px;
@@ -220,12 +276,41 @@ p {
 
 /* Price section */
 
-.section-price {
+.section.price {
   background-color: var(--dark-bg-cl);
+}
+
+.price-block {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.price-list {
+  flex-basis: 585px;
+  justify-content: space-between;
+  padding: 30px 40px;
+}
+
+.price-list:first-child {
+  outline: 1px solid lightgreen;
+}
+.price-list:last-child {
+  outline: 1px solid blue;
 }
 
 .price-item {
   color: var(--grey-txt-cl);
+  margin-bottom: 20px;
+}
+
+.price-item:last-child {
+  margin-bottom: 0;
+}
+
+.price-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Benefits section */
