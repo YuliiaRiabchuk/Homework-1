@@ -348,6 +348,17 @@ p {
   background-color: #f7f7f7;
 }
 
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  
+}
+
+.team-item {
+  /* flex-basis: calc((100%-30px*2)/3); */
+}
+
 .team-name {
   font-weight: 400;
   font-size: 18px;
@@ -367,6 +378,14 @@ p {
 
   color: var(--accent-txt-cl);
 }
+
+/* Gallery  */
+
+.gallery-list {
+  display: flex;
+  gap: 30px;
+}
+
 
 /* Booking */
 
