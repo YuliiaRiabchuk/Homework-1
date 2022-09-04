@@ -123,7 +123,6 @@ p {
   background-color: var(--maine-txt-cl);
 }
 
-
 .uppertitle-theme-dark {
   color: var(--grey-txt-cl-60);
 }
@@ -150,12 +149,8 @@ p {
   color: var(--dark-txt-cl);
 }
 
-
-
-
 .undertitle-theme-dark {
   color: var(--grey-txt-cl);
-  
 }
 
 .section {
@@ -169,15 +164,13 @@ p {
   align-items: center;
 }
 
-
 .media-list::before {
-  content: "";
+  content: '';
   display: block;
   width: 60px;
   height: 1px;
   background-color: var(--maine-txt-cl);
 }
-
 
 /* Header */
 
@@ -188,6 +181,10 @@ p {
 .header-container {
   display: flex;
   align-items: center;
+}
+
+.logo-img {
+  fill: var(--maine-txt-cl);
 }
 
 .logo {
@@ -337,19 +334,35 @@ p {
 }
 
 .price-list:first-child {
-  outline: 1px solid lightgreen;
+  background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
 }
 .price-list:last-child {
-  outline: 1px solid blue;
+  background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
 
 .price-item {
+  display: flex;
+  align-items: baseline;
   color: var(--grey-txt-cl);
   margin-bottom: 20px;
+  gap: 12px;
+}
+
+.price-item::before {
+  content: '';
+  display: block;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.12);
+
+  flex-grow: 1;
 }
 
 .price-item:last-child {
   margin-bottom: 0;
+}
+
+.price-item-serv {
+  order: -1;
 }
 
 .price-btn {
@@ -359,6 +372,22 @@ p {
 }
 
 /* Benefits section */
+
+.benefits-container {
+  display: flex;
+}
+
+.benefits-left-side {
+  flex-basis: 50%;
+}
+
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 370px;
+}
+
 .benefits-quantity {
   font-weight: 700;
   font-size: 42px;
@@ -387,10 +416,20 @@ p {
   color: var(--maine-txt-cl);
 }
 
+.benefits-right-side {
+  flex-basis: 500px;
+}
+
 /* Team */
 
 .team-section {
   background-color: #f7f7f7;
+}
+
+.team-wrap {
+  padding-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .team-list {
@@ -399,9 +438,9 @@ p {
   gap: 30px;
 }
 
-.team-item {
-  /* flex-basis: calc((100%-30px*2)/3); */
-}
+/* .team-item {
+  flex-basis: calc((100%-30px*2)/3);
+} */
 
 .team-name {
   font-weight: 400;
@@ -414,6 +453,7 @@ p {
 }
 
 .team-position {
+  margin-bottom: 30px;
   font-weight: 400;
   font-size: 14px;
   line-height: calc(19 / 14);
@@ -421,6 +461,34 @@ p {
   letter-spacing: 0.02em;
 
   color: var(--accent-txt-cl);
+}
+
+/* Socials */
+
+.socials {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  background-color: var(--light-txt-cl);
+}
+
+.social-icon {
+  fill: var(--maine-txt-cl);
+}
+
+.socials-link:hover .social-icon,
+.socials-link:focus .social-icon {
+  fill: var(--accent-txt-cl);
 }
 
 /* Gallery  */
@@ -512,6 +580,3 @@ p {
 
   color: var(--grey-txt-cl);
 }
-
-
-
