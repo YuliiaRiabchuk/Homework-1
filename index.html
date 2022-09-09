@@ -59,34 +59,36 @@
 
         <div class="header-group">
           <a class="header-contact link" href="tel:++380441111111">+38 044 111 11 11</a>
-          <button class="btn btn-theme-dark" type="button">Online-booking</button>
+          <button class="btn btn-theme-dark" type="button" data-modal-open>Online-booking</button>
         </div>
       </div>
     </header>
-    <main>
+    <maine>
       <!-- Hero section -->
       <section class="hero-section">
-        <div class="container">
-          <ul class="media-list list">
-            <li class="hero-list-item">
-              <a
-                class="hero-link link"
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Youtube</a
-              >
-            </li>
-            <li class="hero-list-item">
-              <a
-                class="hero-link link"
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Instagram</a
-              >
-            </li>
-          </ul>
+        <div class="container hero-container">
+          <div class="hero-left-side">
+            <ul class="media-list list">
+              <li class="hero-list-item">
+                <a
+                  class="hero-link link"
+                  href="https://youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Youtube</a
+                >
+              </li>
+              <li class="hero-list-item">
+                <a
+                  class="hero-link link"
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Instagram</a
+                >
+              </li>
+            </ul>
+          </div>
 
           <div class="hero-right-side">
             <p class="uppertitle uppertitle-theme-dark"> A hair salon for men in Kyiv </p>
@@ -98,11 +100,17 @@
 
           <ul class="slider-controls list">
             <li class="slider-item">
-              <button class="slider-btn" type="button">Back</button>
+              <button class="slider-btn disabled" type="button">Back</button>
             </li>
             <li class="slider-item">
               <button class="slider-btn active" type="button">Forward</button>
             </li>
+          </ul>
+
+          <ul class="slider-pagination list">
+            <li class="slider-pagination-item active"></li>
+            <li class="slider-pagination-item"></li>
+            <li class="slider-pagination-item"></li>
           </ul>
         </div>
       </section>
@@ -513,7 +521,7 @@
           </section>
         </div>
       </div>
-    </main>
+    </maine>
     <footer class="footer">
       <div class="footer-container container">
         <p class="footer-copyright">&copy; Copyright 2020</p>
@@ -539,5 +547,20 @@
         </ul>
       </div>
     </footer>
+
+    <!-- Modal winow -->
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn" type="button" data-modal-close>
+          X
+          <!-- <svg width="20" height="20">
+            <use href=""></use>
+          </svg> -->
+        </button>
+      </div>
+    </div>
+
+    <script src="./modal.js/modal.js"></script>
   </body>
 </html>
