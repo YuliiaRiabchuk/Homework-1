@@ -18,6 +18,7 @@
   /* Others */
   --anim-fast: 400ms ease;
   --anim-slow: 800ms ease-in;
+  --dark-cl-40: rgba(25, 28, 38, 0.4);
 }
 
 /* Reset */
@@ -83,6 +84,8 @@ p {
   border: 1px solid var(--accent-bg-cl);
   border-radius: 25px;
   cursor: pointer;
+
+  transition: background-color var(--anim-slow), color var(--anim-slow);
 }
 
 .btn-theme-dark {
@@ -188,6 +191,11 @@ p {
   backdrop-filter: blur(5px); */
 }
 
+.header.no-transparency {
+  backdrop-filter: blur(4px);
+  background-color: var(--dark-cl-40);
+}
+
 .header-container {
   display: flex;
   align-items: center;
@@ -222,6 +230,8 @@ p {
   letter-spacing: 0.1em;
 
   color: var(--light-txt-cl);
+
+  transition: color var(--anim-fast);
 }
 
 .header .link:hover,
@@ -232,6 +242,7 @@ p {
 .header-group {
   display: flex;
   align-items: center;
+  padding-right: 15px;
 }
 .header-contact {
   margin-right: 45px;
@@ -249,10 +260,16 @@ p {
 }
 
 .hero-left-side {
+  position: relative;
   display: flex;
-  align-items: center;
-  overflow: hidden;
-  width: 150px;
+  align-items: flex-end;
+
+  width: 100px;
+}
+
+.hero-media-list {
+  transform: rotate(-90deg);
+  transform-origin: top left;
 }
 
 .hero-list {
@@ -260,6 +277,21 @@ p {
   font-size: 11px;
   line-height: calc(15 / 11);
   letter-spacing: 0.2em;
+}
+
+.hero-link {
+  display: inline-block;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.2em;
+
+  color: var(--maine-txt-cl);
+
+  transition: color var(--anim-fast);
 }
 
 .hero-link:hover,
@@ -282,7 +314,7 @@ p {
 
 .slider-controls {
   position: absolute;
-  right: 20px;
+  right: 35px;
   bottom: 40px;
 
   display: flex;
@@ -547,6 +579,8 @@ p {
   border-radius: 50%;
 
   background-color: var(--light-txt-cl);
+
+  transition: color var(--anim-fast), background-color var(--anim-fast);
 }
 
 .social-icon {
@@ -556,6 +590,12 @@ p {
 .socials-link:hover .social-icon,
 .socials-link:focus .social-icon {
   fill: var(--accent-txt-cl);
+}
+
+.socials-link:hover,
+.socials-link:focus {
+  color: var(--accent-bg-cl);
+  background-color: rgb(210, 239, 249);
 }
 
 /* Gallery  */
@@ -698,4 +738,8 @@ p {
   border: 1px solid var(--accent-bg-cl);
   border-radius: 50%;
   cursor: pointer;
+}
+
+.close-window {
+  fill: var(--accent-txt-cl);
 }
