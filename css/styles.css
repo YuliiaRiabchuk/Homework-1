@@ -765,12 +765,17 @@ p {
   visibility: hidden;
 }
 
+.backdrop.is-hidden .modal {
+  transform: translate(-200%, -100%) scale(0.7) rotate(-360deg);
+  transition: visibility var(--animation-modal), transform var(--animation-modal);
+}
+
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  /* transform: translate(-50%, -50%) scale(1) rotate(360deg);
-  transition: transform var(--anim-slow); */
+  transform: translate(-50%, -50%) scale(1) rotate(360deg);
+  transition: transform var(--animation-modal);
 
   width: 500px;
   height: 400px;
