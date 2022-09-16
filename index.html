@@ -17,6 +17,15 @@
     <!-- Modern-normalize -->
     <link rel="stylesheet" href="./css/modern-normalize.css" />
 
+    <!-- Animation css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- AOS animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <!-- Custom styles -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
@@ -202,7 +211,7 @@
       </section>
 
       <!-- Benefits -->
-      <section class="section benefits">
+      <section class="section benefits" data-aos="fade-up" data-aos-duration="3000">
         <div class="container benefits-container">
           <div class="benefits-left-side">
             <ul class="benefits-list list">
@@ -243,7 +252,22 @@
 
           <ul class="team-list list card-set">
             <li class="team-item card-set-item">
-              <img class="" src="./images/team/img-1.jpg" alt="teammate" width="370" height="346" />
+              <div class="team-thumb">
+                <img
+                  class=""
+                  src="./images/team/img-1.jpg"
+                  alt="teammate"
+                  width="370"
+                  height="346"
+                />
+                <div class="overlay">
+                  <p class="overlay-desc"
+                    >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse consequuntur
+                    voluptas necessitatibus deleniti eum minima?</p
+                  >
+                </div>
+              </div>
+
               <div class="team-wrap">
                 <h3 class="team-name">John Smith</h3>
                 <p class="team-position">Extreme Barber</p>
@@ -442,7 +466,12 @@
           <p class="uppertitle">in Latin, "barba" means "beard"</p>
           <h2 hidden class="title">Our gallery</h2>
           <ul class="gallery-list list">
-            <li class="gallery-item">
+            <li
+              class="gallery-item"
+              data-aos="zoom-in-up"
+              data-aos-duration="1500"
+              data-aos-delay="100"
+            >
               <img
                 class="gallery-img img"
                 src="./images/gallery/gallery-img-1.jpg"
@@ -451,7 +480,12 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item">
+            <li
+              class="gallery-item"
+              data-aos="zoom-in-up"
+              data-aos-duration="1500"
+              data-aos-delay="300"
+            >
               <img
                 class="img"
                 src="./images/gallery/gallery-img-2.jpg"
@@ -460,7 +494,12 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item">
+            <li
+              class="gallery-item"
+              data-aos="zoom-in-up"
+              data-aos-duration="1500"
+              data-aos-delay="600"
+            >
               <img
                 class="gallery-img img"
                 src="./images/gallery/gallery-img-3.jpg"
@@ -469,7 +508,12 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item">
+            <li
+              class="gallery-item"
+              data-aos="zoom-in-up"
+              data-aos-duration="1500"
+              data-aos-delay="900"
+            >
               <img
                 class="gallery-img img"
                 src="./images/gallery/gallery-img-4.jpg"
@@ -564,5 +608,8 @@
 
     <script src="./js/modal.js"></script>
     <script src="./js/header-scroll.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/aos-animate.js"></script>
   </body>
 </html>
