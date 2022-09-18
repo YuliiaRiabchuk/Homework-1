@@ -759,30 +759,54 @@ p {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.backdrop.is-hidden {
+/* .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+  transition: visibility 1000ms, opacity 1000ms;
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-200%, -100%) scale(0.7) rotate(-360deg);
   transition: visibility var(--animation-modal), transform var(--animation-modal);
-}
+} */
 
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1) rotate(360deg);
-  transition: transform var(--animation-modal);
+  padding: 20px;
 
-  width: 500px;
-  height: 400px;
+  width: 528px;
+  min-height: 581px;
 
   border-radius: 16px;
   background-color: var(--light-txt-cl);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+
+  transform: translate(-50%, -50%);
+
+  /* transform: translate(-50%, -50%) scale(1) rotate(360deg);
+  transition: transform var(--animation-modal); */
+
+  /* animation: modal-animate 2000ms ease; */
+}
+
+@keyframes modal-animate {
+  0% {
+    transform: opacity(1);
+    transform: scale(0.5);
+    transform: translate(-50%, -50%);
+  }
+
+  50% {
+    transform: opacity(0.5);
+    transform: scale(1);
+  }
+
+  100% {
+    transform: opacity(1);
+    transform: scale(1.25);
+  }
 }
 
 .modal-btn {
@@ -806,3 +830,21 @@ p {
 .close-window {
   fill: var(--accent-txt-cl);
 }
+
+/* ПРИКЛАД ВЕР 2
+ .register-form label,
+.register-form input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.register-form input:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.radio-buttons,
+.checkboxes {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+} */
