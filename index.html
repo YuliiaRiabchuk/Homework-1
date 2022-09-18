@@ -598,48 +598,78 @@
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
           <svg class="close-window" width="20" height="20">
-            <use href="./images/sprite.svg#icon-cancel"></use>
+            <use href="./images/sprite.svg#icon-close"></use>
           </svg>
         </button>
 
         <form class="register-form" name="register-form">
           <strong class="register-form-title">Залиште свої дані, ми вам передзвонимо</strong>
 
-          <div class="register-group" role="group">
-            <label>
-              <span>Ім'я</span>
-              <input type="text" name="" />
-              <svg class="" width="18" height="18">
-                <use href=""></use>
+          <div class="register-form-group" role="group">
+            <label class="register-form-field">
+              <span class="register-form-labbel">Ім'я</span>
+              <input class="register-form-input" type="text" name="" required minlength="3" />
+              <svg class="register-form-icon" width="18" height="18">
+                <use href="./images/sprite.svg#icon-person"></use>
               </svg>
             </label>
 
-            <label>
-              <span>Телефон</span>
-              <input type="tel" name="" />
-              <svg class="" width="18" height="18">
-                <use href=""></use>
+            <label class="register-form-field">
+              <span class="register-form-labbel">Телефон</span>
+              <input
+                class="register-form-input"
+                type="tel"
+                name=""
+                required
+                minlength="12"
+                maxlength="12"
+              />
+              <svg class="register-form-icon" width="18" height="18">
+                <use href="./images/sprite.svg#icon-phone"></use>
               </svg>
             </label>
 
-            <label>
-              <span>Пошта</span>
-              <input type="email" name="" />
-              <svg class="" width="18" height="18">
-                <use href=""></use>
+            <label class="register-form-field">
+              <span class="register-form-labbel">Пошта</span>
+              <input class="register-form-input" type="email" name="" required />
+              <svg class="register-form-icon" width="18" height="18">
+                <use href="./images/sprite.svg#icon-email"></use>
               </svg>
             </label>
 
-            <label>
-              <textarea name="" rows="5" placeholder="Введіть текст"></textarea>
+            <label class="register-form-field">
+              <span class="register-form-labbel">Коментар</span>
+
+              <textarea
+                class="register-form-message"
+                name=""
+                rows="5"
+                placeholder="Введіть текст"
+                minlength="4"
+              ></textarea>
             </label>
           </div>
 
-          <label>
-            <input type="checkbox" name="" id="" />
-            <span>Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a></span>
+          <label class="register-form-agreement">
+            <input
+              class="register-form-checkbox visually-hidden"
+              type="checkbox"
+              name=""
+              id=""
+              required
+            />
+            <svg class="register-form-icons" width="16" height="15">
+              <use class="icon-unchecked" href="./images/sprite.svg#icon-unchecked"></use>
+              <use class="icon-checked" href="./images/sprite.svg#icon-checked-2"></use>
+            </svg>
+
+            <span class="register-form-desc"
+              >Погоджуюся з розсилкою та приймаю
+              <a class="register-form-link" href="" target="_blank">Умови договору</a></span
+            >
           </label>
-          <button type="submit">Відправити</button>
+
+          <button class="register-form-btn btn" type="submit">Відправити</button>
         </form>
 
         <!--ПРИКЛАД ФОРМИ вер.2
